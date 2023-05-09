@@ -1,0 +1,92 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container .numbers {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.container .numbers .num {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #CACFD2;
+  color: #CACFD2;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 50%;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  user-select: none;
+}
+
+.container .numbers .num.active {
+  color: #3498DB;
+  border: 3px solid #3498DB ;
+}
+
+.container .numbers .num:not(:last-child) {
+  margin-right: 50px;
+}
+
+.container .numbers .num .before,
+.container .numbers .num .after {
+  content: '';
+  height: 3px;
+  position: absolute;
+  top: 50%;
+  left: calc(100% + 3px);
+  transform: translateY(-50%);
+}
+
+.container .numbers .num .before {
+  width: 50px;
+  background-color: #CACFD2;
+}
+
+.container .numbers .num .after {
+  width: 0px;
+  background-color: #3498DB;
+  transition: all 0.2s ease-in-out;
+}
+
+.container .numbers .num .after.active {
+  width: 50px;
+} 
+
+.container .btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.container .btns .btn {
+  padding: 8px 15px;
+  border-radius: 10px;
+  background-color: #3498DB;
+  color: #fff;
+  cursor: pointer;
+  user-select: none;
+  text-transform: capitalize;
+  transition: all 0.2s ease-in-out;
+}
+
+.container .btns .btn.active {
+  background-color: #66bbf3;
+}
